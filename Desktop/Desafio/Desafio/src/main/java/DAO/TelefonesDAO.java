@@ -32,7 +32,7 @@ public class TelefonesDAO {
             
             
         }catch (Exception erro){
-            throw new RuntimeException("Erro 2: " + erro );
+            throw new RuntimeException("Erro 6: " + erro );
         }
     }
     public void alterar(Telefones telefones){
@@ -50,7 +50,7 @@ public class TelefonesDAO {
             
             
         }catch (Exception erro){
-            throw new RuntimeException("Erro 3: " + erro );
+            throw new RuntimeException("Erro 7: " + erro );
         }
     }
     public void excluir(int valor){
@@ -63,7 +63,7 @@ public class TelefonesDAO {
              st.close();
              
         }catch (Exception erro){
-            throw new RuntimeException("Erro 4: " + erro );
+            throw new RuntimeException("Erro 8: " + erro );
         }
     }
     
@@ -83,7 +83,7 @@ public class TelefonesDAO {
              }                   
           
         }catch (Exception erro){
-            throw new RuntimeException("Erro 5: " + erro );
+            throw new RuntimeException("Erro 9: " + erro );
         }
         
         return lista;
