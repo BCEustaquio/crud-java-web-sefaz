@@ -8,15 +8,15 @@
 <%@page import="Model.Usuario"%>
 <%@page import="DAO.UsuarioDAO"%>
 
-        
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+       
     </head>
     <body>
-        
+
         <%
             try{
                 Usuario usuario = new Usuario();

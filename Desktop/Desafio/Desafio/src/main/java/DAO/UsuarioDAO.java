@@ -86,5 +86,26 @@ public class UsuarioDAO {
         
         return lista;
     }
+    public ArrayList<Usuario> listarPorNome(String nome){
+        String sql= "SELECT * FROM usuario WHERE nome LIKE '%" + nome + "%' ";
+         try{
+             st = conn.createStatement();
+             rs = st.executeQuery(sql);
+             while(rs.next()){
+                Usuario usuario = new Usuario();
+                usuario.setId_usuario(rs.getInt("id_usuario"));
+                usuario.setNome(rs.getString("nome"));
+                usuario.setEmail(rs.getString("email"));
+                usuario.setSenha(rs.getString("senha"));
+                lista.add(usuario);
+                 
+             }                   
+          
+        }catch (Exception erro){
+            throw new RuntimeException("Erro 5: " + erro );
+        }
+        
+        return lista;
+    }
     
 }

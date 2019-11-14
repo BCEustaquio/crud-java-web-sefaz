@@ -11,31 +11,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        
     </head>
     <body>
         <%
-            try{
+            try {
                 Telefones telefones = new Telefones();
                 TelefonesDAO teld = new TelefonesDAO();
-                if(request.getParameter("id_usuario").equals("") ||
-                        request.getParameter("ddd").equals("") || 
-                        request.getParameter("numero").equals("") ||
-                        request.getParameter("tipo").equals("")){
-                    
-                    response.sendRedirect("index.jsp");
-                    
-                }else{
+                if (request.getParameter("id_usuario").equals("")
+                        || request.getParameter("ddd").equals("")
+                        || request.getParameter("numero").equals("")
+                        || request.getParameter("tipo").equals("")) {
+
+                    response.sendRedirect("inserir_telefones.jsp");
+
+                } else {
                     telefones.setId_usuario(Integer.parseInt(request.getParameter("id_usuario")));
                     telefones.setDdd(Integer.parseInt(request.getParameter("ddd")));
                     telefones.setNumero(request.getParameter("numero"));
                     telefones.setTipo(request.getParameter("tipo"));
                     teld.inserir(telefones);
-                    response.sendRedirect("index.jsp");
-                }               
-                              
-            }catch(Exception erro){
-                throw new RuntimeException("Erro 13: " + erro );
+                    response.sendRedirect("inserir_telefones.jsp");
+                }
+
+            } catch (Exception erro) {
+                throw new RuntimeException("Erro 13: " + erro);
             }
         %>
     </body>

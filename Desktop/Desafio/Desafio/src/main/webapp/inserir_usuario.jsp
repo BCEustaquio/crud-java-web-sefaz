@@ -9,24 +9,33 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <title>Desafio Sefaz</title>
     </head>
     <body>
-        <form action="executa_inserir_Usuario.jsp" method="post">
-            <h3>Cadastro de Usuários</h3>
-            <label>Nome: </label><br>
-            <input type="text" name="nome"></input>
-            <br><br>
-                
-            <label>Email: </label><br>
-            <input type="text" name="email"></input>
-            <br><br>
-                
-            <label>Senha: </label><br>
-            <input type="password" name="senha"></input>
-            <br><br>
-            <button type="submit" >Salvar</button>
+        <div class="container-fluid">
+            <form action="executa_inserir_Usuario.jsp" method="post">
+                <h3>Cadastro de Usuários</h3>
+                <div class="form-group">
+                    <label>Nome: </label><br>
+                    <input class="form-control" type="text" name="nome"></input>
+                </div>
+                <div class="form-group">
+                    <label>Email: </label><br>
+                    <input class="form-control" type="text" name="email"></input>
+                </div>
+                <div class="form-group">
+                    <label>Senha: </label><br>
+                    <input class="form-control" type="password" name="senha"></input>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Salvar</button>
 
-        </form>
+            </form>
+        </div>
+        <footer>
+            <script src="js/jquery.js" type="text/javascript"></script>
+            <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        </footer>
     </body>
 </html>

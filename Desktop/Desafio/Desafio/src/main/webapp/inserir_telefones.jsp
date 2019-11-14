@@ -9,32 +9,41 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <title>Desafio Sefaz</title>
     </head>
     <body>
-       <form action="executa_inserir_telefones.jsp" method="post">
-            <h3>Cadastro de Telefones</h3>
-            <label>Id do usuário:  </label><br>
-            <input type="text" name="id_usuario"></input>
-            <br><br>
+        <div class="container-fluid">
+            <form action="executa_inserir_telefones.jsp" method="post">
+                  
+                <h3>Cadastro de Telefones</h3>
                 
-            <label>DDD: </label><br>
-            <input type="text" name="ddd"></input>
-            <br><br>
-                
-            <label>Número: </label><br>
-            <input type="password" name="numero"></input>
-            <br><br>
-            
-            <label>Tipo: </label><br>
-            <select id="tipo">
-                <option value="fixo">Fixo</option>
-                <option value="celular">Celular</option>
-            </select> 
-            
-            <br><br>
-            <button type="submit" >Salvar</button>
+                <div class="form-group">
+                    <input class="form-control" type="text" value="<%=request.getParameter("id_usuario")%>" hidden>
+                </div>
+                <div class="form-group">
+                    <label>DDD: </label>
+                    <input class = "form-control" type="text" name="ddd"></input>
+                </div>
+                <div class="form-group">
+                    <label>Número: </label><br>
+                    <input class= "form-control" type="text" name="numero"></input>
+                </div>
+                <div class="form-group">
+                <label>Tipo: </label><br>
+                <select id="tipo">
+                    <option value="fixo">Fixo</option>
+                    <option value="celular">Celular</option>
+                </select> 
+                </div>
 
-        </form>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Salvar</button>
+
+            </form>
+        </div>
+        <footer>
+            <script src="js/jquery.js" type="text/javascript"></script>
+            <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        </footer>
     </body>
 </html>

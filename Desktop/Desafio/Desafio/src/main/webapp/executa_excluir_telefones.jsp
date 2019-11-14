@@ -10,17 +10,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+       
     </head>
     <body>
-         <%
-        try{
-            TelefonesDAO teld = new TelefonesDAO();
-            teld.excluir(Integer.parseInt(request.getParameter("id_tel")));
-            response.sendRedirect("index.jsp");
-        }catch(Exception erro){
-                throw new RuntimeException("Erro 15: " + erro );
-            }
+        <%
+       try{
+           TelefonesDAO teld = new TelefonesDAO();
+           teld.excluir(Integer.parseInt(request.getParameter("id_tel")));
+           response.sendRedirect("inserir_telefones.jsp?id_usuario="+request.getParameter("id_usuario"));
+                
+       }catch(Exception erro){
+               throw new RuntimeException("Erro 15: " + erro );
+           }
 
         
         %>

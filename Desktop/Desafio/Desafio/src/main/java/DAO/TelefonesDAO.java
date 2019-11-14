@@ -37,14 +37,13 @@ public class TelefonesDAO {
     }
     public void alterar(Telefones telefones){
         
-        String sql="UPDATE telefones SET id_usuario = ?, ddd = ?, numero = ?, tipo = ? WHERE id_tel = ?";
+        String sql="UPDATE telefones SET  ddd = ?, numero = ?, tipo = ? WHERE id_tel = ?";
         try{
             stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, telefones.getId_usuario());
-            stmt.setInt(2, telefones.getDdd());
-            stmt.setString(3, telefones.getNumero());
-            stmt.setString(4, telefones.getTipo());
-            stmt.setInt(5, telefones.getId_tel());
+            stmt.setInt(1, telefones.getDdd());
+            stmt.setString(2, telefones.getNumero());
+            stmt.setString(3, telefones.getTipo());
+            stmt.setInt(4, telefones.getId_tel());
             stmt.execute();
             stmt.close();
             
