@@ -7,7 +7,6 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-
 public class UsuarioDAO {
     
     private Connection conn;
@@ -108,4 +107,33 @@ public class UsuarioDAO {
         return lista;
     }
     
+    
+    
+    public boolean validar(String email, String senha) {
+       conn = new ConnectionFactory().getConexao();
+       boolean check = false;
+        String sql="Select * from usuario  WHERE email = ? and senha = ?";
+        try{
+            
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1,email);
+            stmt.setString(2,senha);
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                check = true;
+                
+            }
+            stmt.close();
+            
+            
+        }catch (Exception erro){
+            throw new RuntimeException("Erro 17: " + erro );
+        }
+        return check;
+    }
+      
+   
 }
+    
+    
+

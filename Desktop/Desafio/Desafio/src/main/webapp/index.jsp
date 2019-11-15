@@ -12,10 +12,12 @@
 
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <title>Desafio Sefaz</title>
+        
     </head>
     <body>
         <div class="container-fluid">
             <h1>Usuarios</h1><br>
+           
             <h3>Pesquisar por nome</h3>
             <form action="index.jsp" method="post">
                 <div class="form-group">
