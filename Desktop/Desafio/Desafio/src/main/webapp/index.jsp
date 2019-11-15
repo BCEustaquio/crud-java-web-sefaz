@@ -46,8 +46,8 @@
                             out.print("<td>" + lista.get(num).getNome() + "</td>");
                             out.print("<td>" + lista.get(num).getEmail() + "</td>");
                             out.print("<td>" + lista.get(num).getSenha() + "</td>");
-                            out.print("<td><a class='btn btn-primary' href='inserir_telefones.jsp?id_usuario=" + lista.get(num).getId_usuario() + "&nome =" + lista.get(num).getNome() + "&email = " + lista.get(num).getEmail() + "&senha = " + lista.get(num).getSenha() + "'>Telefones</td>");
-                            out.print("<td><a class='btn btn-primary' href='alterar_usuario.jsp?id_usuario=" + lista.get(num).getId_usuario() + "&nome =" + lista.get(num).getNome() + "&email = " + lista.get(num).getEmail() + "&senha = " + lista.get(num).getSenha() + "'>Editar</td>");
+                            out.print("<td><a class='btn btn-primary' href='inserir_telefones.jsp?id_usuario=" + lista.get(num).getId_usuario() + "'>Telefones</td>");
+                            out.print("<td><a class='btn btn-primary' href='alterar_usuario.jsp?id_usuario=" + lista.get(num).getId_usuario() + "&nome=" + lista.get(num).getNome() + "&email= " + lista.get(num).getEmail() + "&senha= " + lista.get(num).getSenha() + "'>Editar</td>");
                             out.print("<td><a class='btn btn-primary' href='executa_excluir_Usuario.jsp?id_usuario=" + lista.get(num).getId_usuario()+ "'>Excluir</td>");
                             out.print("</tr>");
                             
@@ -60,7 +60,7 @@
                             out.print("<td>" + lista.get(num).getNome() + "</td>");
                             out.print("<td>" + lista.get(num).getEmail() + "</td>");
                             out.print("<td>" + lista.get(num).getSenha() + "</td>");
-                            out.print("<td><a class='btn btn-primary' href='inserir_telefones.jsp?id_usuario=" + lista.get(num).getId_usuario() + "&nome =" + lista.get(num).getNome() + "&email = " + lista.get(num).getEmail() + "&senha = " + lista.get(num).getSenha() + "'>Telefones</td>");
+                            out.print("<td><a class='btn btn-primary' href='inserir_telefones.jsp?id_usuario=" + lista.get(num).getId_usuario() + "'>Telefones</td>");
                             out.print("<td><a class='btn btn-primary' href='alterar_usuario.jsp?id_usuario=" + lista.get(num).getId_usuario() + "&nome =" + lista.get(num).getNome() + "&email = " + lista.get(num).getEmail() + "&senha = " + lista.get(num).getSenha() + "'>Editar</td>");
                             out.print("<td><a class='btn btn-primary' href='executa_excluir_Usuario.jsp?id_usuario=" + lista.get(num).getId_usuario() + "'>Excluir</td>");
                             out.print("</tr>");

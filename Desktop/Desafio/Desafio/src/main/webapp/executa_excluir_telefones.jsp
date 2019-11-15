@@ -17,7 +17,7 @@
        try{
            TelefonesDAO teld = new TelefonesDAO();
            teld.excluir(Integer.parseInt(request.getParameter("id_tel")));
-           response.sendRedirect("inserir_telefones.jsp?id_usuario="+request.getParameter("id_usuario"));
+               response.sendRedirect("inserir_telefones.jsp?id_usuario="+request.getParameter("id_usuario"));
                 
        }catch(Exception erro){
                throw new RuntimeException("Erro 15: " + erro );

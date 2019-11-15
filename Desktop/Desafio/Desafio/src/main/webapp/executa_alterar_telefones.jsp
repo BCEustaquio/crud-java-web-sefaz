@@ -24,16 +24,17 @@
                     request.getParameter("tipo").equals("") || 
                     request.getParameter("id_tel").equals("")){
                     
-                    response.sendRedirect("index.jsp");
-                    
+                     response.sendRedirect("inserir_telefones.jsp?id_usuario="+request.getParameter("id_usuario"));
+                
                 }else{
                     telefones.setId_usuario(Integer.parseInt(request.getParameter("id_usuario")));
                     telefones.setDdd(Integer.parseInt(request.getParameter("ddd")));
                     telefones.setNumero(request.getParameter("numero"));
                     telefones.setTipo(request.getParameter("tipo"));
-                    telefones.setId_tel(Integer.parseInt("id_tel"));
+                    telefones.setId_tel(Integer.parseInt(request.getParameter("id_tel")));
                     teld.alterar(telefones);
-                    response.sendRedirect("index.jsp");
+                     response.sendRedirect("inserir_telefones.jsp?id_usuario="+request.getParameter("id_usuario"));
+                
                 }               
                               
             }catch(Exception erro){

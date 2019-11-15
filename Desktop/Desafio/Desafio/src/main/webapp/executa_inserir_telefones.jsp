@@ -23,7 +23,7 @@
                         || request.getParameter("numero").equals("")
                         || request.getParameter("tipo").equals("")) {
 
-                    response.sendRedirect("inserir_telefones.jsp");
+                        response.sendRedirect("inserir_telefones.jsp?id_usuario="+request.getParameter("id_usuario"));
 
                 } else {
                     telefones.setId_usuario(Integer.parseInt(request.getParameter("id_usuario")));
@@ -31,7 +31,7 @@
                     telefones.setNumero(request.getParameter("numero"));
                     telefones.setTipo(request.getParameter("tipo"));
                     teld.inserir(telefones);
-                    response.sendRedirect("inserir_telefones.jsp");
+                    response.sendRedirect("inserir_telefones.jsp?id_usuario="+request.getParameter("id_usuario"));
                 }
 
             } catch (Exception erro) {

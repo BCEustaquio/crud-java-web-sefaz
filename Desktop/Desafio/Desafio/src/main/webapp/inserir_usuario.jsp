@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label>Senha: </label><br>
-                    <input class="form-control" type="password" name="senha"></input>
+                    <input class="form-control" type="text" name="senha"></input>
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Salvar</button>
 

@@ -73,6 +73,7 @@ public class TelefonesDAO {
              rs = st.executeQuery(sql);
              while(rs.next()){
                 Telefones telefones = new Telefones();
+                telefones.setId_tel(rs.getInt("id_tel"));
                 telefones.setId_usuario(rs.getInt("id_usuario"));
                 telefones.setDdd(rs.getInt("ddd"));
                 telefones.setNumero(rs.getString("numero"));
