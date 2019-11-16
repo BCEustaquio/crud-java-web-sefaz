@@ -45,7 +45,7 @@
                     </form>
                 
                 <div style="margin-top:20px; text-align: center; padding-top:30px;">
-                    <a href="login_novo_usuario.jsp" class="btn btn-lg btn-outline-light">Novo usuário</a>
+                    <a href="login_novo_usuario.jsp" class="btn btn-lg btn-outline-light">Criar Conta</a>
                 </div>
                             
             </div>
@@ -71,7 +71,7 @@
         </div>
 
         </div>
-        <footer class="container-fluid">
+        <footer>
 
             Desenvolvido por BCE Version 1.0
             
