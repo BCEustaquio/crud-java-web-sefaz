@@ -13,28 +13,26 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-       
+
     </head>
     <body>
 
         <%
-            try{
+            try {
 
                 UsuarioDAO usud = new UsuarioDAO();
-                if(request.getParameter("email").equals("") || request.getParameter("senha").equals("")){
-                    response.sendRedirect("login.jsp");
-                    
-                }else if(usud.validar(request.getParameter("email"),request.getParameter("senha"))){
-                    
-                   response.sendRedirect("index.jsp");
-                }else{
-                    response.sendRedirect("login.jsp?val=false");
-                }  
-             
-                
-                
-            }catch(Exception erro){
-                throw new RuntimeException("Erro 10: " + erro );
+                if (request.getParameter("email").equals("") || request.getParameter("senha").equals("")) {
+                    response.sendRedirect("index.jsp");
+
+                } else if (usud.validar(request.getParameter("email"), request.getParameter("senha"))) {
+
+                    response.sendRedirect("inicio.jsp");
+                } else {
+                    response.sendRedirect("index.jsp?val=false");
+                }
+
+            } catch (Exception erro) {
+                throw new RuntimeException("Erro 10: " + erro);
             }
         %>
     </body>

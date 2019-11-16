@@ -10,19 +10,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+
     </head>
     <body>
         <%
-        try{
-            UsuarioDAO usud = new UsuarioDAO();
-            usud.excluir(Integer.parseInt(request.getParameter("id_usuario")));
-            response.sendRedirect("index.jsp");
-        }catch(Exception erro){
-                throw new RuntimeException("Erro 12: " + erro );
+            try {
+                UsuarioDAO usud = new UsuarioDAO();
+                usud.excluir(Integer.parseInt(request.getParameter("id_usuario")));
+                response.sendRedirect("inicio.jsp");
+            } catch (Exception erro) {
+                throw new RuntimeException("Erro 12: " + erro);
             }
 
-        
+
         %>
     </body>
 </html>

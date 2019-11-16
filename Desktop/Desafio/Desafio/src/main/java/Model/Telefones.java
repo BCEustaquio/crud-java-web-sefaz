@@ -1,6 +1,7 @@
 package Model;
 
 public class Telefones {
+
     private int id_tel;
     private int id_usuario;
     private int ddd;
@@ -46,5 +47,5 @@ public class Telefones {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-  
+
 }

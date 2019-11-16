@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-       
+
     </head>
     <body>
 
@@ -22,7 +22,7 @@
                 Usuario usuario = new Usuario();
                 UsuarioDAO usud = new UsuarioDAO();
                 if(request.getParameter("nome").equals("") || request.getParameter("email").equals("") || request.getParameter("senha").equals("")){
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("inicio.jsp");
                     
                 }else{
                     usuario.setNome(request.getParameter("nome"));
@@ -30,7 +30,7 @@
                     usuario.setSenha(request.getParameter("senha"));
                     usuario.setId_usuario(Integer.parseInt(request.getParameter("id_usuario")));
                     usud.alterar(usuario);
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("inicio.jsp");
                 }        
              
                 
