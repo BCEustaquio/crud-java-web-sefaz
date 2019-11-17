@@ -1,0 +1,7 @@
+DAO\ConnectionFactory.class
+Model\Telefones.class
+com\mycompany\desafio\JAXRSConfiguration.class
+DAO\TelefonesDAO.class
+DAO\UsuarioDAO.class
+Model\Usuario.class
+com\mycompany\desafio\resources\JavaEE8Resource.class
